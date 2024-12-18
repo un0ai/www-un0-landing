@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --highlight-green: #4CAF50;
+  --highlight-bg: rgba(76, 175, 80, 0.15);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Custom styles for the navigation */
+nav {
+  position: relative;
+  z-index: 10;
+}
+
+nav a {
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Navigation Styles */
+.nav-item {
+  position: relative;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--highlight-bg);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.nav-item.active {
+  color: var(--highlight-green) !important;
+  font-weight: 500;
+}
+
+.nav-item.active::before {
+  opacity: 1;
+  transform: scale(1);
+  background: var(--highlight-bg);
+}
+
+.nav-item:hover:not(.active)::before {
+  opacity: 0.5;
+  transform: scale(1);
+  background: rgba(255, 255, 255, 0.05);
+}
