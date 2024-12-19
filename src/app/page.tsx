@@ -105,7 +105,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
                 <div className="bg-[#1a1a1a] rounded-lg p-6 flex flex-col justify-center h-full">
                   <div>
-                    <h2 className="text-white text-xl mb-4">Platform Overview</h2>
+                    <h2 className="text-gray-400 text-xl mb-4">Platform Overview</h2>
                     <p className="text-white mb-4">un0.ai is a platform designed to create and manage ML lifecycles.
                       <br/>It enables the deployment and orchestration of MLOps pipelines with real-time observability of workflows.
                     </p>
@@ -214,7 +214,7 @@ export default function Home() {
                       <span className="text-[#4CAF50] px-3 py-1 rounded-full bg-[#4CAF50]/10">100%</span>
                     </div>
                     <div className="mt-4">
-                      <p className="text-white mb-4">Real-time performance monitoring and performance tracking.</p>
+                      <p className="text-white mb-4">Real-time operation monitoring and performance tracking.</p>
                       <h3 className="text-gray-400">Tools</h3>
                       <p className="text-white mb-4">langsmith · langfuse</p>
                     </div>
